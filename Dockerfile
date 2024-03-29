@@ -1,9 +1,8 @@
 FROM php:5.6-apache
 
-LABEL maintainer="Florin Buzec <florinb@telebroad.com>"
+LABEL maintainer="Florin Buzec <florin.buzec@gmail.com>"
 
 RUN sed -i 's/httpredir.debian.org/deb.debian.org/g' /etc/apt/sources.list
-#RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list

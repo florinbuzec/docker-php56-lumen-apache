@@ -5,4 +5,4 @@ start:
 stop:
 		docker compose down
 into:
-		docker exec -it php-app-1 bash
+		docker exec -it docker-php56-lumen-apache-php-app-1 bash

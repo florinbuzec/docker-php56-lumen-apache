@@ -12,9 +12,11 @@ services:
       - TZ=${TZ:-Europe/Bucharest}
     volumes:
       - ./src:/var/www/html
-      - ./logs:/var/log
-    network_mode: host
+      #- ./logs:/var/log
+    #network_mode: host
     expose:
       - 8083
+    ports:
+      - 8083:8083
     # temporarly
     tty: true
