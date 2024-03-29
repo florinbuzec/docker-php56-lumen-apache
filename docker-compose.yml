@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  php-app:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    hostname: app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    environment:
+      - TZ=${TZ:-Europe/Bucharest}
+    volumes:
+      - ./src:/var/www/html
+      - ./logs:/var/log
+    network_mode: host
+    expose:
+      - 8083
+    # temporarly
+    tty: true

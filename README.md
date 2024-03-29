@@ -1,1 +1,6 @@
-# docker-php56-lumen-apache
+## docker-php56-lumen-apache
+
+- Start:
+```bash
+make
+```
