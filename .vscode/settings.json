@@ -1,0 +1,72 @@
+{
+    "editor.fontSize": 14,
+    "files.associations": {
+        ".env": "ini",
+        "*.neon": "yaml",
+        "*.xml.dist": "xml",
+        ".htaccess.local": "apacheconf"
+    },
+
+    // dispar din lista!
+    "files.exclude": {
+        ".clean": true,
+        "cgi-bin": true,
+        "**/.well-known": true,
+    },
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.clean/**": true,
+        "**/tests/**": true,
+    },
+
+    "intelephense.environment.phpVersion": "5.6.40",
+    "intelephense.environment.includePaths": [
+        "/opt/tools/php/php-cs-fixer/",
+        "**/vendor/"
+    ],
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/node_modules/**",
+        "**/.clean/**"
+    ],
+
+    "intelephense.diagnostics.undefinedTypes": false,   //
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    //"intelephense.diagnostics.undefinedVariables": true,    //$_GET undefined, pe bune
+    "intelephense.diagnostics.deprecated": false,           // deprecated din PROBLEMS
+    "editor.showDeprecated": true,                          // deprecated - sa fie taiate in apel
+
+    "intelephense.stubs": [
+        "xdebug",
+        "Core",
+        "superglobals",
+        "date",         // DateTime, DateTimeImmutable class
+        "ds",
+        "PDO",
+        "pdo_mysql",
+        "memcached",
+        "redis"
+    ],
+
+    "intelephense.maxMemory": 256,
+    "typescript.tsserver.maxTsServerMemory": 256,   // default: 3072!
+
+    /* PHP-CS-fixer */
+    "php-cs-fixer.executablePath": "/usr/local/bin/php-cs-fixer",
+    "php-cs-fixer.formatHtml": false,
+    "php-cs-fixer.rules": "@PSR12",
+    "php-cs-fixer.config": ".php-cs-fixer.php;.php-cs-fixer.dist.php;.php_cs;.php_cs.dist;",
+    "php-cs-fixer.autoFixByBracket": false,
+    "files.watcherExclude": {
+        "**/.git/**": true,
+        "**/node_modules/**": true,
+        "**/.clean/**": true
+    },
+
+    /* PHPUnit */
+    "phpunit.clearOutputOnRun": true,
+
+}
